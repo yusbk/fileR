@@ -1,0 +1,27 @@
+---
+title: "Mixing portrait and landscape WITHOUT a header.tex file"
+header-includes:
+- \usepackage{pdflscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
+output: pdf_document
+---
+
+Portrait
+```{r}
+summary(cars)
+```
+
+\newpage
+\blandscape
+Landscape
+```{r}
+summary(cars)
+```
+\elandscape
+
+\newpage
+More portrait
+```{r}
+summary(cars)
+```
