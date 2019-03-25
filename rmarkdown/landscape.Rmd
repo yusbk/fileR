@@ -25,3 +25,15 @@ More portrait
 ```{r}
 summary(cars)
 ```
+
+\newpage
+
+With *kableExtra* prints only the table in landscape.
+
+```{r landTab, results="asis" }
+library(knitr)
+library(kableExtra)
+
+landscape(knitr::kable(head(mtcars), "latex"))
+```
+
